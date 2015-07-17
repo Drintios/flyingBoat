@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> Flappy Bird Clone </title>
+
+        <link rel="stylesheet" type="text/css" href="assets/general.css">
+
+        <script type="text/javascript" src="phaser.min.js"></script>
+        <script type="text/javascript" src="boot.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript">
+            // Initialize Phaser in 400x490 px 
+            var gameWidth = 400;
+            var gameHeight = 630;
+            var game = new Phaser.Game(gameWidth, gameHeight, Phaser.AUTO, 'gameDiv');
+
+            // Add and start the 'main' state to start the game
+            game.state.add('boot', boot);
+            game.state.add('main', mainState);  
+            game.state.start('boot');  
+
+        </script>
+    </head>
+
+    <body>
+        <div id="gameDiv"></div>
+
+        <script type="text/javascript" src="jquery.min.js"></script>
+
+        <script type="text/javascript">
+            console.log('Width: ' + $(window).width());
+
+            console.log('Height: ' + $(window).height());
+        </script>
+    </body>
+</html>

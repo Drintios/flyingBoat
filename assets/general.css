@@ -1,0 +1,13 @@
+body {
+    background: #46BCCB none repeat scroll 0% 0% !important;
+    margin: 0;
+}
+
+#gameDiv{
+    margin: 0;
+    max-width: 100%;
+}
+
+canvas {
+    max-width: 100% !important;
+}
